@@ -1,8 +1,34 @@
-
-
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+img {
+    max-width: 100%;  /**Para que la imagen ocupe  todo sobre todo en dispositivos moviles **/
+}
 .site-header {
     padding: 20px 0 20px 0;
 }
 .contenedor {
     max-width: 1200px;
+    margin: 0 auto; /**Esto es para que se centre y no se quede a la izquierda del todo **/
+}
+
+/** Navegación  **/
+.barra {
+    background-color: #DB008D;
+}
+.navegacion-principal a{
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    display: block;
+    text-align: center;
+    padding: 20px;
+}
+@media (min-width:768px){
+    .navegacion-principal a{
+        display: inline-block;       
+    }
+}
+.navegacion-principal a:hover {
+    background-color: #00B8E4
 }
