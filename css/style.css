@@ -1,19 +1,51 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 img {
     max-width: 100%;  /**Para que la imagen ocupe  todo sobre todo en dispositivos moviles **/
 }
+
 .site-header {
     padding: 20px 0 20px 0;
 }
 .contenedor {
     max-width: 1200px;
     margin: 0 auto; /**Esto es para que se centre y no se quede a la izquierda del todo **/
+    overflow: auto;
 }
+p {
+    font-size: 16px;
+    line-height: 2;
+}
+.boton{
+    background-color: #00B8E4;
+    padding: 10px 60px;
+    display: inline-block;
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color .3s ease-in-out;
+}
+.boton:hover {
+    background-color: rgb(0, 131, 164);
+}
+
 
 /** Navegación  **/
 .barra {
+    margin-top: 40px;
     background-color: #DB008D;
 }
 .navegacion-principal a{
@@ -30,5 +62,69 @@ img {
     }
 }
 .navegacion-principal a:hover {
-    background-color: #00B8E4
+    background-color: #00B8E4;
+}
+/**Contenedores Principales **/
+.contenido-principal {
+    margin-top: 40px;
+}
+.contenido-principal,
+.sidebar {
+    padding: 20px;
+    margin-top: 40px;
+}
+@media (min-width:768px) {
+.contenido-principal {
+    width: 70%;
+    float: left;
+    padding: 0 60px 0 0; 
+    }
+
+.sidebar {
+    width: 30%;
+    float:  right;
+    padding: 0;
+}
+}
+/** Entradas deBlog **/
+h2 {
+    color: #00B8E4;
+    margin-bottom: 20px;
+}
+.entrada {
+    margin-bottom: 30px;
+}
+.entrada:Last-of-type {
+    margin-bottom: 0;
+}
+.entrada img {
+    display: block;
+}
+@media (min-width: 480px) {
+    .entrada img {
+        width: 300px;
+        float: left;
+        margin: 0 30px 30px 0;
+    }
+}
+.entrada p {
+    text-align: justify;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li  {
+    padding: 10px;
+}
+.sidebar ul li:hover  {
+    background-color: #00B8E4;
+}
+.sidebar ul li a {
+    color: #00B8E4;
+    font-size: 18px;
+    text-decoration: none;
+}
+.sidebar ul li:hover a  {
+    color: white;
 }
